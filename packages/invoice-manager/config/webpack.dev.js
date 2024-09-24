@@ -20,7 +20,7 @@ const devConfig = {
       remotes: {
         auth: 'auth@http://localhost:8082/remoteEntry.js',
         customer: 'customer@http://localhost:8081/remoteEntry.js',
-        // product: 'product@http://localhost:8083/remoteEntry.js',
+        product: 'product@http://localhost:8083/remoteEntry.js',
       },
       shared: packageJson.dependencies,
     }),
