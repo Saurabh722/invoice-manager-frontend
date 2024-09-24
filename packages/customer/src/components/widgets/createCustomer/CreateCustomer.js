@@ -20,7 +20,7 @@ const initState = {
 const getState = (state) => {
   return state?.customerId ? state : initState;
 }
-export default function FormDialog({type, onClose, open, selected, setCustomerList}) {
+export default function CreateCustomer({type, onClose, open, selected, setCustomerList}) {
   console.log('type-selected', selected);
   const [customer, setCustomer] = useState(getState(selected));
   const isDrawer = type === 'drawer';
