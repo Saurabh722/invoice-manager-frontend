@@ -3,6 +3,8 @@ import axios from 'axios';
 import CreateProduct from '../widgets/CreateProduct';
 import Table from './Table';
 
+const DOMAIN = 'http://localhost:8000';
+
 const getHeads = (row) => {
   const keys = Object.keys(row);
   return keys.map(key => key.charAt(0).toUpperCase() + key.slice(1));
@@ -22,7 +24,7 @@ export default function InvoiceApp({type}) {
 
   const onEdit = (productId) => {
     console.log(productId);
-    axios.put(`http://localhost:8000/product/${productId}`, {productId: productId}).then(function ({data}) {
+    axios.put(`${DOMAIN}product/${productId}`, {productId: productId}).then(function ({data}) {
       console.log(data);
       setProductList(data);
     });
@@ -30,7 +32,7 @@ export default function InvoiceApp({type}) {
 
   const onDelete = (productId) => {
     console.log(productId);
-    axios.delete(`http://localhost:8000/product/${productId}`, {productId: productId}).then(function ({data}) {
+    axios.delete(`${DOMAIN}/product/${productId}`, {productId: productId}).then(function ({data}) {
       console.log(data);
       setProductList(data);
     });
