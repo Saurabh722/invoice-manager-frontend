@@ -9,11 +9,11 @@ const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
-    publicPath: '/container/latest/',
+    publicPath: '/invoice-manager/latest/',
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'container',
+      name: 'invoice-manager',
       remotes: {
         auth: `auth@${domain}/auth/latest/remoteEntry.js`,
         customer: `customer@${domain}/customer/latest/remoteEntry.js`,

@@ -16,7 +16,7 @@ const devConfig = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'container',
+      name: 'invoice-manager',
       remotes: {
         auth: 'auth@http://localhost:8082/remoteEntry.js',
         customer: 'customer@http://localhost:8081/remoteEntry.js',
